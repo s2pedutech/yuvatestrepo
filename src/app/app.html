@@ -1,0 +1,49 @@
+<ion-menu [content]="mainContent">
+  <ion-header >
+    <ion-toolbar color="mynavbar">
+        <div text-center>
+        <img style="border-radius: 50%;display:inline-block;" src="assets/img/EBoYCfTQMWsZTO72VmuU_yuva.png" width="60px" height="60px"/>
+            </div>
+      <ion-title>
+          
+        <ion-title text-center> Yuva Foundation </ion-title>
+      </ion-title>
+        
+    </ion-toolbar>
+  </ion-header>
+  <ion-content  id="side-menu21">
+    <ion-list color="menubg" id="yuva-list1">
+        
+      <ion-item color="menubg" menuClose="" on-click="goToHome()" id="yuva-list-item7">
+        <ion-icon name="home" item-left></ion-icon>
+        Home
+      </ion-item>
+      <ion-item color="menubg" menuClose="" on-click="goToMyProfile()" id="yuva-list-item14">
+        <ion-icon name="ios-person" item-left></ion-icon>
+        My Profile
+      </ion-item>
+        <ion-item menuClose="" on-click="goToGallery()" id="yuva-list-item14">
+        <ion-icon name="ios-images" item-left></ion-icon>
+        Gallery
+      </ion-item>
+      <ion-item menuClose="" on-click="goToTraining()" id="yuva-list-item9">
+        <ion-icon name="ios-clipboard" item-left></ion-icon>
+        Training
+      </ion-item>
+      <ion-item menuClose="" on-click="goToAboutUs()" id="yuva-list-item12">
+        <ion-icon name="ios-contacts" item-left></ion-icon>
+        About Us
+      </ion-item>
+      <ion-item menuClose="" on-click="goToContactUs()" id="yuva-list-item13">
+        <ion-icon name="ios-call" item-left></ion-icon>
+        Contact Us
+      </ion-item>
+      <ion-item menuClose="" on-click="goToLogin()" id="yuva-list-item10">
+        <ion-icon name="md-log-out" item-left></ion-icon>
+        Logout
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav #mainContent [root]="rootPage"></ion-nav>

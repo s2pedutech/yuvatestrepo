@@ -1,0 +1,78 @@
+<ion-content padding id="page5">
+  <img src="assets/img/EBoYCfTQMWsZTO72VmuU_yuva.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+  <div class="spacer" style="width:300px;height:51px;" id="signup-spacer4"></div>
+  <form [formGroup]="signUpForm">
+    <ion-list id="signup-list3">
+      <ion-item id="signup-input3">
+        <ion-label>
+          First Name
+        </ion-label>
+        <ion-input formControlName="firstName" type="text" placeholder=""></ion-input>
+      </ion-item>
+        <ion-item text-wrap *ngIf="!signUpForm.controls.firstName.valid  && signUpForm.controls.firstName.dirty">
+                <p>Please enter a valid First Name. Characters Only. Max Length 30</p>
+            </ion-item>
+        <ion-item id="signup-input3">
+        <ion-label>
+          Last Name
+        </ion-label>
+        <ion-input formControlName="lastName" type="text" placeholder=""></ion-input>
+      </ion-item>
+        <ion-item *ngIf="!signUpForm.controls.lastName.valid  && signUpForm.controls.lastName.dirty">
+                <p>Please enter a valid Last Name. Max Length 30</p>
+            </ion-item>
+     
+      <ion-item id="signup-input4">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input formControlName="emailId" type="email" placeholder=""></ion-input>
+          
+      </ion-item>
+        <ion-item *ngIf="!signUpForm.controls.emailId.valid && signUpForm.controls.emailId.dirty">
+                <p>Please enter a valid email Id.</p>
+            </ion-item>
+         <ion-item>
+        <ion-label>
+          Mobile
+        </ion-label>
+        <ion-input formControlName="mobNo" type="text" placeholder=""></ion-input>
+      </ion-item>
+        <ion-item *ngIf="!signUpForm.controls.mobNo.valid && signUpForm.controls.mobNo.dirty">
+                <p>Please enter a valid Indian Mobile Number.</p>
+            </ion-item>
+    <ion-item id="signup-input4">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input formControlName="password" type="password" placeholder=""></ion-input>
+          <ion-item *ngIf="!signUpForm.controls.password.valid  && (signUpForm.controls.password || submitAttempt)">
+                <p>Please enter a valid email Id. 7-15 characters</p>
+            </ion-item>
+      </ion-item>
+        
+        <ion-item>
+            <ion-label>City</ion-label>
+          <ion-select formControlName="city">
+            <ion-option (interface)="popover" (ionChange) = "onSelectCity()" *ngFor = "let item of cities" value={{item.name}}>{{item.name}}</ion-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-item >
+            <select-searchable text-wrap
+                title="College"
+                
+                formControlName="college"
+                [items]="colleges"
+                itemValueField="name"
+                itemTextField="name"
+                [canSearch]="true"
+                (onChange)="selectCollege($event)">
+            </select-searchable>
+        </ion-item>
+    </ion-list>
+    <button id="signup-button3" [disabled]="!signUpForm.valid" ion-button color="light" block style="border-radius:10px 10px 10px 10px;" on-click="goToHome()">
+      Sign up
+    </button>
+  </form>
+</ion-content>

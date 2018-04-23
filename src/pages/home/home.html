@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="mynavbar">
+    <button ion-button menuToggle>
+      <ion-icon color="light" name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <h3 id="home-heading4" style="color:#000000;font-weight:300;text-align:center;">
+    Upcoming Yuva Events
+  </h3>
+  <div class="spacer" style="height:100px;" id="home-spacer6"></div>
+  <ion-list id="home-list4">
+    <ion-item (click)="gotoDetails(item)" *ngFor="let item of events" color="none" id="home-list-item21">
+        
+      <ion-thumbnail item-left>
+        <img src="{{item.img}}"/>
+      </ion-thumbnail>
+        <h2>{{item.name}}</h2>
+        <h2>Venue: {{item.venue}}</h2>
+        <h2>Date: {{item.date}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>

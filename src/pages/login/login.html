@@ -1,0 +1,38 @@
+<ion-content padding id="page4">
+  <form id="login-form1">
+    <img src="assets/img/21geaNOTOqhpJ7S4MhlE_logo1.png" style="display:block;width:100%;height:auto;margin-left:auto;margin-right:auto;" />
+      
+    <div class="spacer" style="height:40px;" id="login-spacer1"></div>
+     
+    <ion-list id="login-list2">
+      <ion-item id="login-input1">
+        <ion-label color="danger">
+          Mobile No.
+        </ion-label>
+        <ion-input [(ngModel)]="mobno" name="mobno" type="text" placeholder=""></ion-input>
+      </ion-item>
+        
+        <ion-item>
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input [(ngModel)]="email" name="email" type="email" placeholder=""></ion-input>
+      </ion-item>
+        
+        <ion-item>
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input [(ngModel)]="password" name="password" type="password" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="spacer" style="height:40px;" id="login-spacer3"></div>
+    <button id="login-button1" ion-button color="mynavbar" block on-click="goToHome()">
+      Log in
+    </button>
+    <button id="login-button2" ion-button clear color="mynavbar" block on-click="goToSignup()">
+      Or create an account
+    </button>
+         
+  </form>
+</ion-content>
